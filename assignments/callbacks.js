@@ -71,14 +71,16 @@ console.log(sumNums(2,3, add));
   };
   console.log(multiplyNums(2,3, multiply));
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
-  
+//Contains 
+
+  function contains(list, item) {
+    let contain = items.includes(item, 0)
+}
+console.log(contains('Pencil'));
+
 /* STRETCH PROBLEM */
 
 // function removeDuplicates(array, cb) {
 //   // removeDuplicates removes all duplicate values from the given array.
 //   // Pass the duplicate free array to the callback function.
 //   // Do not mutate the original array.
-// }
