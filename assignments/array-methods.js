@@ -95,7 +95,26 @@ console.log(donationTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//Create an email list for all of the registered runners to notify them of updates.
+let runnersEmailList = runners.map(function(runnerEmail){
+  return runnerEmail.email;
+});
+console.log(runnersEmailList);
 
 // Problem 2
+//Create an email list for all of the registered runners from Skinix.
+let runnersSkinix = runners.filter(function(company){
+  return company.company_name === "Skinix";
+});
+console.log(runnersSkinix);
 
 // Problem 3
+// return runners id and name 
+let newList = [];
+runners.forEach(function(idAndName){
+  const myId = idAndName.id;
+  const myFirstName = idAndName.first_name;
+  newList.push(myId + ' ' + myFirstName);
+
+})
+console.log(newList);
