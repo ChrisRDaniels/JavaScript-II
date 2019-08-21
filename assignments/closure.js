@@ -12,6 +12,18 @@ function add() {
   return counter; 
 }
 console.log(add());
+
+function makeFunc() {
+  var name = 'Chris';
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc();
+myFunc();
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
