@@ -18,11 +18,11 @@ function makeFunc() {
   function displayName() {
     console.log(name);
   }
-  return displayName;
+  return displayName();
 }
 
 var myFunc = makeFunc();
-myFunc();
+console.log(makeFunc());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
