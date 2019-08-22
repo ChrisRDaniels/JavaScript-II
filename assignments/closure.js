@@ -16,7 +16,7 @@ console.log(add());
 function makeFunc() {
   var name = 'Chris';
   function displayName() {
-    console.log(name);
+    return name;
   }
   return displayName();
 }
