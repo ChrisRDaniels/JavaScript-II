@@ -5,22 +5,11 @@
 // The outer scope can be a parent function, or the top level of the script.
 
 // the plus function has access to the variables declared in the add function, it would also have access to any global variables(not added in this example)
-function add() {
-  var counter = 0;
-  function plus() {counter += 1;}
-  plus();    
-  return counter; 
-}
-console.log(add());
-
-function makeFunc() {
-  var name = 'Chris';
-  function displayName() {
-    return name;
-  }
-  return displayName();
-}
-console.log(makeFunc());
+let apples = 'fruit';
+function banana(){
+  return apples;
+};
+console.log(banana());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
