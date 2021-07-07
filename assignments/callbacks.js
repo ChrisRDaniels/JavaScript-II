@@ -15,7 +15,7 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   function firstItem(arr, cb) {
     return cb(arr[0]);
   }
-
+                                                     
   // NOTES ON THE SOLUTION:
 
   // firstItem is a higher order function.
@@ -41,29 +41,46 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
-}
 
-function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+  return cb(arr.length);
 }
+console.log(getLength(items,(arrlength) => {
+return arrlength;
+}));
 
-function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
-}
 
-function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-}
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
+let add = (x,y) => {
+  return x + y;
 }
+let sumNums = (x, y, cb) => {
+  return cb(x,y);// sumNums adds two numbers (x, y) and passes the result to the callback.
+  
+};
+console.log(sumNums(2,3, add));
+
+
+
+
+  let multiply = (x,y) => {
+    return x * y;
+  }
+  let multiplyNums = (x, y, cb) => {
+    return cb(x,y);
+    
+  };
+  console.log(multiplyNums(2,3, multiply));
+
+//Contains 
+
+  function contains(list, item) {
+    let contain = items.includes(item, 0)
+}
+console.log(contains('Pencil'));
 
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-}
+// function removeDuplicates(array, cb) {
+//   // removeDuplicates removes all duplicate values from the given array.
+//   // Pass the duplicate free array to the callback function.
+//   // Do not mutate the original array.
